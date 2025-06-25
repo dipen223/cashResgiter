@@ -1,0 +1,42 @@
+:root{
+    --main-bg-color:#1e1e2f;
+    --btn-color:#fca311;
+    --text-color:#dcdcdc;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--main-bg-color);
+    color:var(--text-color);
+}
+
+main{
+    text-align: center;
+}
+
+.register-title{
+    margin:20px 0;
+}
+
+.user-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+}
+
+.user-input label{
+    font-size: 1.2rem;
+}
+
+#cash{
+    font-size: 1.1rem;
+    padding:0.2em 0.5em;
+    margin-bottom: 12px;
+}
