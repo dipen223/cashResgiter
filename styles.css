@@ -70,7 +70,29 @@ main{
     border: 2px solid rgb(236, 250, 236);
     width:60%;
     height:50%;
+    border-radius: 8px;
+    position: relative;
+}
 
+.keyboard{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:8px;
+    justify-content: center;
+    margin:30px auto 0;
+    max-width: 500px;
+    width:100%;
+}
+.key{
+    padding:5px 0;
+    background-color: #e0e0e0;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    box-shadow: 0 -2px 0 #ccc, 0 2px 4px rgba(0,0,0,0.1);
+    color:#333333;
+    user-select: none;
+    cursor: pointer;
 }
 
 
@@ -79,4 +101,7 @@ main{
   .change-display{
     width:300px;
   }    
+  .keyboard{
+    width:80%;
+  }
 }
