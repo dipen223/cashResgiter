@@ -1,107 +1,140 @@
-:root{
-    --main-bg-color:#1e1e2f;
-    --btn-color:#fca311;
-    --text-color:#dcdcdc;
+:root {
+  --main-bg-color: #1e1e2f;
+  --btn-color: #fca311;
+  --text-color: #dcdcdc;
+  --border-radius: 10px;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: var(--main-bg-color);
-    color:var(--text-color);
+body {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  text-align: center;
 }
 
-main{
-    text-align: center;
+main {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #252c3a; /* Slightly darker panel */
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 12px rgba(252, 163, 17, 0.3);
 }
 
-.register-title{
-    margin:20px 0;
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--btn-color);
 }
 
-.user-input{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:8px;
+.user-input {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
 }
 
-.user-input label{
-    font-size: 1.2rem;
+label {
+  font-size: 1.1rem;
 }
 
-#cash{
-    font-size: 1.1rem;
-    padding:0.2em 0.5em;
-    margin-bottom: 12px;
+#cash {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background: #3a4153;
+  color: var(--text-color);
+  outline: none;
+  width: 100%;
+  max-width: 250px;
 }
 
-.change-display{
-    height:500px;
-    width:500px;
-    margin:0 auto;
-    border:2px solid;
-    margin-top:12px;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    padding:1em;
-    gap:20px;
-
+#purchase-btn {
+  background: var(--btn-color);
+  color: #000;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 0 auto 1rem auto;
+  display: block;
+  width: 160px;
 }
 
-#purchase-btn{
-    color:#fff;
-    padding:0.5em 1.2em;
-    background-color:var(--main-bg-color);
-    cursor: pointer;
-    border-color: rgb(216, 240, 0);
-    border-radius: 5px;
-    border-width: 3px;
-    font-size: 1.2em;
+#purchase-btn:hover {
+  background: #d18c0a;
 }
 
-#change-due{
-    border: 2px solid rgb(236, 250, 236);
-    width:60%;
-    height:50%;
-    border-radius: 8px;
-    position: relative;
+#change-due {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #2e3547;
+  border-radius: var(--border-radius);
+  min-height: 100px;
+  font-size: 1rem;
+  color: var(--text-color);
 }
 
-.keyboard{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:8px;
-    justify-content: center;
-    margin:30px auto 0;
-    max-width: 500px;
-    width:100%;
-}
-.key{
-    padding:5px 0;
-    background-color: #e0e0e0;
-    text-align: center;
-    border-radius: 6px;
-    font-size: 1.2rem;
-    box-shadow: 0 -2px 0 #ccc, 0 2px 4px rgba(0,0,0,0.1);
-    color:#333333;
-    user-select: none;
-    cursor: pointer;
+.status {
+  font-weight: bold;
+  color: var(--btn-color);
+  margin-bottom: 0.5rem;
 }
 
+.status.error {
+  color: #ff4d4f;
+}
 
+.drawer-title {
+  margin-top: 2rem;
+  color: var(--btn-color);
+}
 
-@media screen  and (max-width:500px){
-  .change-display{
-    width:300px;
-  }    
-  .keyboard{
-    width:80%;
+.drawer-line,
+.change-line,
+.no-change {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+#cash-drawer-display {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #2e3547;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #cash {
+    font-size: 1rem;
+  }
+
+  #purchase-btn {
+    font-size: 1rem;
+    width: 100%;
   }
 }
